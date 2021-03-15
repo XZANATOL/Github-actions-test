@@ -1,0 +1,28 @@
+name: PR_Comment
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on closed pull requests
+  pull_request:
+    types: [ closed ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  #workflow_dispatch:
+
+jobs:
+  call_bot:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Must be merged in order to trigger
+    if: ${{ github.event.pull_request.merged == true }}
+
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Commenter
+        uses: thollander/actions-comment-pull-request@1.0.1
+         
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          message: "all-contributors please add @${{ github.event.pull_request.user.login }} to code and documentation"
