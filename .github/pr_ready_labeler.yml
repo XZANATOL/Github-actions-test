@@ -1,3 +1,5 @@
 Ready_to_review:
-- ./*
-- ./**
+- "*"
+
+Ready_to_review:
+- "**"
