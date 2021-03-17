@@ -24,8 +24,6 @@ jobs:
             GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
             message: 'Please link the issue you are assigned to.'
-        run: exit 0
-    # The action will fail if not valid issue is there
             
   auto_label:
     needs: check_pr
