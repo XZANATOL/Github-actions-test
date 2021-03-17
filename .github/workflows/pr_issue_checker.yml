@@ -30,7 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: Renato66/auto-label@v2
+      - uses: actions/labeler@v2
         with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          default-labels: '["Ready_to_Review"]'
+          repo-token: "${{ secrets.GITHUB_TOKEN }}"
+          configuration-path: .github/pr_ready_labeler.yml
