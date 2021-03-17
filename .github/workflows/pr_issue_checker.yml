@@ -30,8 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-      - uses: TimonVS/pr-labeler-action@v3
+      - uses: Renato66/auto-label@v2
         with:
-          configuration-path: .github/pr-labeler.yml
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          default-labels: '["Ready_to_Review"]'
