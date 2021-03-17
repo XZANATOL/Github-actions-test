@@ -1,0 +1,39 @@
+name: PR_Comment
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on any pull request create approaches
+  pull_request:
+    types: [ edited, synchronize, opened, reopened ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  #workflow_dispatch:
+
+jobs:
+  check_pr:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+        
+      - name: Verify Linked Issue
+        uses: hattan/verify-linked-issue-action@v1.1.1
+         
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+            message: 'Please link the issue you are assigned to.'
+        run: exit 0
+    # The action will fail if not valid issue is there
+            
+  auto_label:
+    needs: check_pr
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: TimonVS/pr-labeler-action@v3
+        with:
+          configuration-path: .github/pr-labeler.yml
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
