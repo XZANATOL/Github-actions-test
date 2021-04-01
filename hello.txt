@@ -1,1 +1,2 @@
-will not be merged
+will be merged
+issue closer automatic
