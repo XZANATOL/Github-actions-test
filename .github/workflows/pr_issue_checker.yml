@@ -1,4 +1,4 @@
-name: PR_Comment
+name: PR_Issue_Checker
 
 # Controls when the action will run. 
 on:
