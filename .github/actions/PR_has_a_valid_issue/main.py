@@ -6,5 +6,5 @@ body = os.getenv("INPUT_PRBODY")  # PR body
 url  = os.getenv("INPUT_PRURL")   # PR URL
 
 issue = re.search(pattern, body)[0].replace("#", "")
-print(issue)
+url = "/".join( url.split("/")[:-2] )
 print(url)
