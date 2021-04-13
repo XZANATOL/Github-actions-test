@@ -7,6 +7,10 @@ inputs:
     description: "The body of the PR to search for related issues"
     required: true
     
+  prurl:
+    description: "URL of the Pull Request"
+    required: true
+    
 runs:
   using: "docker"
   image: "Dockerfile"
