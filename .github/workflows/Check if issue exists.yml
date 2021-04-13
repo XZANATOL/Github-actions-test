@@ -18,4 +18,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: prints PR body
-        run: echo "XZANATOL this is ${{ github.event.action }}"
+        run: echo "XZANATOL this is ${{ github.event.pull_request.body }}"
