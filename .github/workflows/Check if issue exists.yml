@@ -6,7 +6,7 @@ name: Check if issue exists
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   pull_request:
-    types: ["labelled"]
+    types: [labeled]
 
 jobs:
   # This workflow contains a single job called "build"
