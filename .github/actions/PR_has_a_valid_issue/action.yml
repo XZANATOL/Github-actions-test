@@ -3,7 +3,7 @@ name: "PR_has_a_valid_issue"
 description: "Checks for a valid Issue number linked with the PR"
 
 inputs:
-  pr_body:
+  prbody:
     description: "The body of the PR to search for related issues"
     required: true
     
