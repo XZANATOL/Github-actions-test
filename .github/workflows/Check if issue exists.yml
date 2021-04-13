@@ -14,8 +14,7 @@ jobs:
         uses: ./.github/actions/PR_has_a_valid_issue/
         with:
           prbody: ${{ github.event.pull_request.body }}
-        env:
-          body: ${{ github.event.pull_request.body }}
+          prurl: ${{ github.event.pull_request.url }}
 
       - name: prints PR url
         run: echo "XZANATOL this is $body"
