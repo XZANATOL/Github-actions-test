@@ -18,4 +18,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: prints PR body
-        run: echo ${{ GITHUB_CONTEXT }}
+        run: echo ${{ github.event.action }}
