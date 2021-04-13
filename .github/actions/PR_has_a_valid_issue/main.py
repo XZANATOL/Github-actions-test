@@ -1,7 +1,9 @@
-import os
+import os, re
 
-print("This is the PR body", os.getenv("INPUT_PRBODY"))
+pattern = "#\d+"
+
+body = os.getenv("INPUT_PRBODY")
 print("*************************")
-print(os.getenv("INPUT_PRBODY"))
+print(body)
 print("*************************")
-print(type(os.getenv("INPUT_PRBODY")))
+print(re.search(pattern, body))
