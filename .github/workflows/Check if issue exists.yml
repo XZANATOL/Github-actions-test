@@ -13,10 +13,11 @@ jobs:
       - name: "Pull request body displayer"
         uses: ./.github/actions/PR_has_a_valid_issue/
         with:
-          prbody: "$body"
+          prbody: "HELLOOOOOOOOOOOOOOOOO"
         env:
           body: ${{ github.event.pull_request.body }}
 
       - name: prints PR url
-        # github.event.pull_request.body to get the body of the PR
-        run: echo "XZANATOL this is ${{ github.event.pull_request.body }}"
+        run: echo "XZANATOL this is $body"
+        env:
+          body: ${{ github.event.pull_request.body }}
