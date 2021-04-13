@@ -19,4 +19,4 @@ jobs:
 
       - name: prints PR url
         # github.event.pull_request.body to get the body of the PR
-        run: echo "XZANATOL this is ${{ github.event.pull_request.url }}"
+        run: echo "XZANATOL this is ${{ github.event.pull_request.body }}"
