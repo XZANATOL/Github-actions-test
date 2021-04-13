@@ -11,6 +11,8 @@ jobs:
       - uses: actions/checkout@v2
       
       - uses: ./.github/actions/PR_has_a_valid_issue/
+        with:
+          pr_body: "${{ github.event.pull_request.url }}"
 
       - name: prints PR body
         # github.event.pull_request.url to get the body of the PR
