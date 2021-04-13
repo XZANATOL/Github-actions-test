@@ -5,7 +5,6 @@ description: "Checks for a valid Issue number linked with the PR"
 inputs:
   prbody:
     description: "The body of the PR to search for related issues"
-    required: true
     
 runs:
   using: "docker"
