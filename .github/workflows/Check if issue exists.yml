@@ -13,7 +13,7 @@ jobs:
       - name: "Pull request body displayer"
         uses: ./.github/actions/PR_has_a_valid_issue/
         with:
-          prbody: "HELLOOOOOOOOOOOOOOOOO"
+          prbody: ${{ github.event.pull_request.body }}
         env:
           body: ${{ github.event.pull_request.body }}
 
