@@ -6,7 +6,7 @@ name: Check if issue exists
 on:
   # Triggers the workflow on push or pull request events but only for the main branch
   pull_request:
-    types: ["labelled"]
+    types: [labeled]
 
 jobs:
   # This workflow contains a single job called "build"
@@ -18,4 +18,4 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: prints PR body
-        run: echo ${{ GITHUB_CONTEXT }}
+        run: echo "XZANATOL this is ${{ github.event.pull_request.url }}"
