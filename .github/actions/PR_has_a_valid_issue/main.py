@@ -1,7 +1,7 @@
 import os
 
-print("This is the PR body", os.getenv("pr_body"))
+print("This is the PR body", os.getenv("prbody"))
 print("*************************")
-print(os.getenv("pr_body"))
+print(os.getenv("prbody"))
 print("*************************")
-print(type(os.getenv("pr_body")))
+print(type(os.getenv("prbody")))
