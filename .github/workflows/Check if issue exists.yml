@@ -32,7 +32,7 @@ jobs:
             $URL \
             -H "Content-Type: application/json" \
             -H "Authorization token $GITHUB_TOKEN" \
-            --data '{"Body":"Please update PR body with a valid issue number"}'
+            --data '{"body":"Please update PR body with a valid issue number"}'
         env:
           URL: ${{ github.event.pull_request.url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
