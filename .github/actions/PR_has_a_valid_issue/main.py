@@ -19,16 +19,14 @@ valid = 0                               # Is valid code
 response = requests.get(url)
 if response.status_code == 200:         # Check if not a 404 page
     print("status code is 200")
-    print(response.url)
-    print(url)
     if response.url == url:             # Check if not redirected to a pull request page
-        # Check if Issue is open not closed
+        # Check if Issue is Open not Closed
         text = response.text
         pattern_issue = "Status:\s(\w+)"
         if re.search(pattern_issue, text)[1] == "Open":
             valid = 1
         else:
-            print("didnt find the open flag")
+            print("Couldn't find Open flag")
 
 print("Valid flag is now", valid)
         
