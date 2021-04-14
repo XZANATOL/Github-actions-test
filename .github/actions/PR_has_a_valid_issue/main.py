@@ -30,5 +30,7 @@ if response.status_code == 200:         # Check if not a 404 page
             print("Couldn't find Open flag")
 
 print("Valid flag is now", valid)
+
+f"::set-output name=valid::{valid}"
         
         
