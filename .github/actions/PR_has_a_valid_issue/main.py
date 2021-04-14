@@ -1,5 +1,5 @@
 import os, re, requests
-"""
+
 pattern = "#\d+"  # Used pattern to search for Issues.
 
 body = os.getenv("INPUT_PRBODY")  # PR body
@@ -14,8 +14,7 @@ url[2] = url[2].replace("api", "www")   # Replace API URL with HTML URL
 url.pop(3)                              # Get rid of "repos" record
 url = "/".join(url)                     # Reattach URL pieces
 url += "/issues/{}".format(issue_num)   # Add issue number
-"""
-url = 
+
 valid = 0                               # Is valid code
 response = requests.get(url)
 if response.status_code == 200:         # Check if not a 404 page
