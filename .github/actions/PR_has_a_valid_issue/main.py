@@ -15,7 +15,7 @@ url.pop(3)                              # Get rid of "repos" record
 url = "/".join(url)                     # Reattach URL pieces
 url += "/issues/{}".format(issue_num)   # Add issue number
 
-valid_code = "0"                             # Is valid code
+valid_code = False                      # Is valid code
 response = requests.get(url)
 if response.status_code == 200:         # Check if not a 404 page
     print("status code is 200")
@@ -25,7 +25,7 @@ if response.status_code == 200:         # Check if not a 404 page
         text = response.text
         pattern_issue = "Status:\s(\w+)"
         if re.search(pattern_issue, text)[1] == "Open":
-            valid_code = "1"
+            valid_code = True
         else:
             print("Couldn't find Open flag")
 
