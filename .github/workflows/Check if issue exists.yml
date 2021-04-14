@@ -30,7 +30,7 @@ jobs:
           curl \
             -X POST \
             -H "Accept: application/vnd.github.v3+json" \
-            -H "Authorization: $GITHUB_TOKEN"
+            -H "Authorization: $GITHUB_TOKEN" \
             $URL \
             -d '{"body":"Please update PR body with a valid issue number"}'
         env:
