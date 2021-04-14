@@ -11,6 +11,10 @@ inputs:
     description: "URL of the Pull Request"
     required: true
     
+outputs:
+  valid:
+    description: "code for a valid issue (0=Invalid, 1=Valid)"
+    
 runs:
   using: "docker"
   image: "Dockerfile"
