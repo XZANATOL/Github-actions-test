@@ -25,10 +25,14 @@ jobs:
           configuration-path: .github/labeller.yml
 
       - name: "Validation action on 0"
-        uses: mshick/add-pr-comment@v1
         if: ${{ steps.validator.outputs.valid == 0 }}
-        with:
-          message: "Please update PR body with a valid issue number"
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          repo-token-user-login: "github-actions[bot]"
-          allow-repeats: true
+        run: |
+          curl \
+            -X POST \
+            $URL \
+            -H "Content-Type: application/json" \
+            -H "Authorization token $GITHUB_TOKEN" \
+            --data '{"Body":"Please update PR body with a valid issue number"}'
+        env:
+          URL: ${{ github.event.pull_request.url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
