@@ -17,6 +17,13 @@ jobs:
           prbody: ${{ github.event.pull_request.body }}
           prurl: ${{ github.event.pull_request.url }}
 
+      - name: "Validation action on 1"
+        uses: actions/labeler@v2
+        if: ${{ steps.validator.outputs.valid == 1 }}
+        with:
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          configuration-path: .github/labeller.yml
+
       - name: "Validation action on 0"
         uses: mshick/add-pr-comment@v1
         if: ${{ steps.validator.outputs.valid == 0 }}
@@ -25,10 +32,3 @@ jobs:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           repo-token-user-login: "github-actions[bot]"
           allow-repeats: true
-          
-      - name: "Validation action on 1"
-        uses: actions/labeler@v2
-        if: ${{ steps.validator.outputs.valid == 1 }}
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration-path: .github/labeller.yml
