@@ -29,9 +29,10 @@ jobs:
         run: |
           curl --request POST \
             --url $URL \
-            --header 'authorization: $GITHUB_TOKEN' \
+            --header 'authorization: Bearer $GITHUB_TOKEN' \
             --header 'content-type: application/json' \
-            --data '{"body":"Please update PR body with a valid issue number"}'
+            --data '{"body":"Please update PR body with a valid issue number"}' \
+            --fail
         env:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
