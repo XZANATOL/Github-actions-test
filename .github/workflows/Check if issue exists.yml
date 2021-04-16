@@ -18,11 +18,10 @@ jobs:
           prurl: ${{ github.event.pull_request.url }}
 
       - name: "Validation action on 1"
-        uses: actions/labeler@v2
         if: ${{ steps.validator.outputs.valid == 1 }}
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
-          configuration-path: .github/labeller.yml
+        run: gh pr edit $PRNUM --add-label "Ready_to_Review"
+        env:
+          PRNUM: ${{ github.event.pull_request.number }}
 
       - name: "Validation action on 0"
         if: ${{ steps.validator.outputs.valid == 0 }}
