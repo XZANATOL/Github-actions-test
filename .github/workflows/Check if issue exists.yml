@@ -26,12 +26,7 @@ jobs:
 
       - name: "Validation action on 0"
         if: ${{ steps.validator.outputs.valid == 0 }}
-        run: |
-          curl --request POST \
-            --url $URL \
-            --header "Authorization: token $GITHUB_TOKEN" \
-            --header "Accept: application/vnd.github.v3+json" \
-            --data '{"body":"Please update PR body with a valid issue number"}' \
+        run: gh pr comment --body "Please update PR body with a valid issue number"
         env:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
