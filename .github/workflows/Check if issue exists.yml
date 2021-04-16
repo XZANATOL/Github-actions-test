@@ -26,7 +26,7 @@ jobs:
 
       - name: "Validation action on 0"
         if: ${{ steps.validator.outputs.valid == 0 }}
-        run: gh pr comment --body "Please update PR body with a valid issue number"
+        run: gh pr comment ${{ github.event.pull_request.number }} --body "Please update PR body with a valid issue number"
         env:
           URL: ${{ github.event.pull_request.comments_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
