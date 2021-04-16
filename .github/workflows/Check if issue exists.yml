@@ -19,8 +19,11 @@ jobs:
 
       - name: "Validation action on 1"
         if: ${{ steps.validator.outputs.valid == 1 }}
-        run: gh pr edit $PRNUM --add-label "Ready_to_Review"
+        run: |
+          gh auth login --with-token $Github_Token
+          gh pr edit $PRNUM --add-label "Ready_to_Review"
         env:
+          Github_Token: ${{ secrets.GITHUB_TOKEN }}
           PRNUM: ${{ github.event.pull_request.number }}
 
       - name: "Validation action on 0"
