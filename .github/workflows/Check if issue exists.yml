@@ -20,8 +20,10 @@ jobs:
       - name: "Validation action on 1"
         if: ${{ steps.validator.outputs.valid == 1 }}
         run: |
-          gh auth login --with-token < $Github_Token
+          echo $Github_Token > mytoken.txt
+          gh auth login --with-token < mytoken.txt
           gh pr edit $PRNUM --add-label "Ready_to_Review"
+          rm mytoken.txt
         env:
           Github_Token: ${{ secrets.GITHUB_TOKEN }}
           PRNUM: ${{ github.event.pull_request.number }}
