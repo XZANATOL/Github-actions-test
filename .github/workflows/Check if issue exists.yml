@@ -36,4 +36,5 @@ jobs:
           gh pr comment $PRNUM --body "Please update PR body with a valid issue number"
           rm mytoken.txt
         env:
+          Github_Token: ${{ secrets.GITHUB_TOKEN }}
           PRNUM: ${{ github.event.pull_request.number }}
