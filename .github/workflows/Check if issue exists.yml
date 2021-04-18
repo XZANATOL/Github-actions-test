@@ -2,7 +2,7 @@ name: PR has a valid Issue?
 
 on:
   pull_request:
-    types: [labeled]
+    types: [ edited, synchronize, opened, reopened ]
 
 jobs:
   checker:
