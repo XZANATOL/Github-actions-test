@@ -22,8 +22,8 @@ jobs:
         run: |
           echo $Github_Token > mytoken.txt
           gh auth login --with-token < mytoken.txt
-          gh pr edit $PRNUM --add-label "PR:Ready-to-Merge"
-          gh pr edit $PRNUM --remove-label "PR:No-Issue"
+          gh pr edit $PRNUM --add-label "Ready_to_Review"
+          gh pr edit $PRNUM --remove-label "bug"
           rm mytoken.txt
         env:
           Github_Token: ${{ secrets.GITHUB_TOKEN }}
@@ -35,7 +35,7 @@ jobs:
           echo $Github_Token > mytoken.txt
           gh auth login --with-token < mytoken.txt
           gh pr comment $PRNUM --body "PR is not linked to any issue, please make the corresponding changes in the body, for help follow this [link](https://github.com/HarshCasper/Rotten-Scripts/blob/master/CONTRIBUTING.md)"
-          gh pr edit $PRNUM --add-label "PR:No-Issue"
+          gh pr edit $PRNUM --add-label "bug"
           rm mytoken.txt
         env:
           Github_Token: ${{ secrets.GITHUB_TOKEN }}
