@@ -8,7 +8,7 @@ jobs:
   checker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
       
       - name: PR_has_a_valid_issue
         uses: XZANATOL/prepare-to-publish-github-action@2
