@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       
       - name: PR_has_a_valid_issue
-        uses: XZANATOL/prepare-to-publish-github-action@1
+        uses: XZANATOL/prepare-to-publish-github-action@2
         with:
           prbody: ${{ github.event.pull_request.body }}
           prurl: ${{ github.event.pull_request.url }}
