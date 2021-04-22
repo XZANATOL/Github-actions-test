@@ -18,3 +18,4 @@ jobs:
           message: "Please Enter a valid issue"
           invlbl: "bug"
           vlbl: "documentation"
+          token: ${{ secrets.GITHUB_TOKEN }}
