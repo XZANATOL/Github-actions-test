@@ -17,10 +17,7 @@ jobs:
 
       - name: Run script
         run: |
-          python ./.github/scripts/Update_Database.py "$body"
-          git status
-          git add datastore.json
-          git commit -m "Updated Datastore"
-          git push origin master
+          python ./.github/scripts/Update_Database.py "$body" "$token"
         env:
           body: ${{ github.event.pull_request.body }}
+          token: ${{ secrets.github_token }}
