@@ -1,0 +1,17 @@
+name: Python package
+
+on:
+  pull_request:
+    types: [labeled]
+
+jobs:
+  extract_and_update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run script
+        run: |
+          echo $token
+        env:
+          toekn: ${{ secrets.github_token }}
