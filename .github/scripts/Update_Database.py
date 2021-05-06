@@ -95,6 +95,8 @@ def extract_from_pr_body(pr_body):
 if __name__ == "__main__":
     data = sys.argv[1]
     data = data.split("\n")
+    for element in data:
+        data[data.index(element)] = element.rstrip("\r")
     print("test*************************************")
     print(data)
     print("test*************************************")
