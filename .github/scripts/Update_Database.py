@@ -45,7 +45,7 @@ def add_script(category, name, path, entry, arguments, requirments_path, contrib
     print("[+] Login Success!")
     repo = git.get_repo("XZANATOL/Github-actions-test")
     datastore_file = repo.get_contents("./Master Script/datastore.json")
-    repo.update_file(datastore_file.path, "Updated datastore.json", data_store, datastore_file.sha, branch="main")
+    repo.update_file(datastore_file.path, "Updated datastore.json", str(data_store), datastore_file.sha, branch="main")
 
 
 def read_data():
