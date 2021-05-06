@@ -20,7 +20,7 @@ jobs:
           python ./.github/scripts/Update_Database.py "$body"
           git status
           git add "./Master Script/datastore.json"
-          git commint -m "Updated Datastore"
+          git commit -m "Updated Datastore"
           git push origin master
         env:
           body: ${{ github.event.pull_request.body }}
