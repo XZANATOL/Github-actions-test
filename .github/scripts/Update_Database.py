@@ -94,8 +94,8 @@ def extract_from_pr_body(pr_body):
 
 if __name__ == "__main__":
     data = sys.argv[1]
+    data = data.split()
     print("test*************************************")
     print(data)
     print("test*************************************")
-    #data = data.split()
     #extract_from_pr_body(data)
