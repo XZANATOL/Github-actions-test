@@ -46,7 +46,7 @@ def read_data():
 
 
 def extract_from_pr_body(pr_body):
-    pr_body = pr_body[pr_body.index("## Project Metadata\n"):]
+    pr_body = pr_body[pr_body.index("## Project Metadata"):]
     category_list = []
     for text in pr_body:
         # <----- Validate Category ----->
