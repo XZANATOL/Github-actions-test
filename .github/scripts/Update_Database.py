@@ -17,7 +17,6 @@ description = r"Description: (.+)"
 
 def add_script(category, name, path, entry, arguments, requirments_path, contributor, description, pa_token):
     """ Add a Contributor script to database """
-
     new_data = {category: {name: [path, entry, arguments, requirments_path, contributor, description]}}
     data_store = read_data()
     
@@ -33,19 +32,16 @@ def add_script(category, name, path, entry, arguments, requirments_path, contrib
         else:
             print("Data wasn't added please re-run the script and add the correct inputs.")
             sys.exit(1)
-        
-    with open("datastore.json", "w") as file:
-        json.dump(data_store, file)
-    print("Script added to database")
 
-    # <----- Github Login ----->
+    # <----- Github Login & Database Update ----->
     git = Github(pa_token)
     user_object = git.get_user()
     git_username = user_object.login
-    print("[+] Login Success!")
+    print("[+] PyGithub Login Success!")
     repo = git.get_repo("XZANATOL/Github-actions-test")
     datastore_file = repo.get_contents("./Master Script/datastore.json")
     repo.update_file(datastore_file.path, "Updated datastore.json", str(data_store), datastore_file.sha, branch="main")
+    print("[+] Database Updated")
 
 
 def read_data():
@@ -106,6 +102,7 @@ def extract_from_pr_body(pr_body, pa_token):
         add_script(cat, title, folder, script, argument, requirements, user, desc, pa_token)
 
 
+# Start Checkpoint
 if __name__ == "__main__":
     # Get PR body and pass pa_token
     data = sys.argv[1]
