@@ -18,5 +18,6 @@ jobs:
       - name: Run script
         run: |
           python ./.github/scripts/Update_Database.py "$body"
+          git status
         env:
           body: ${{ github.event.pull_request.body }}
