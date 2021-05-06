@@ -15,7 +15,7 @@ contributor = r"Contributor: (.+)"
 description = r"Description: (.+)"
 
 
-def add_script(category, name, path, entry, arguments, requirments_path, contributor, description):
+def add_script(category, name, path, entry, arguments, requirments_path, contributor, description, pa_token):
     """ Add a Contributor script to database """
 
     new_data = {category: {name: [path, entry, arguments, requirments_path, contributor, description]}}
@@ -29,7 +29,7 @@ def add_script(category, name, path, entry, arguments, requirments_path, contrib
         sure = "Y"
         sure = input("A new category is about to be added. You sure? Y/n > ")
         if sure.lower() == "y" or sure == "":
-            data_store.update(new_data)                                     # Add new category
+            data_store.update(new_data)                                   # Add new category
         else:
             print("Data wasn't added please re-run the script and add the correct inputs.")
             sys.exit(1)
@@ -37,6 +37,15 @@ def add_script(category, name, path, entry, arguments, requirments_path, contrib
     with open("datastore.json", "w") as file:
         json.dump(data_store, file)
     print("Script added to database")
+
+    # <----- Github Login ----->
+    git = Github(pa_token)
+    user_object = git.get_user()
+    git_username = user_object.login
+    print("[+] Login Success!")
+    repo = git.get_repo("XZANATOL/Github-actions-test")
+    datastore_file = repo.get_contents("./Master Script/datastore.json")
+    repo.update_file(datastore_file.path, "Updated datastore.json", data_store, datastore_file.sha, branch="main")
 
 
 def read_data():
@@ -46,7 +55,7 @@ def read_data():
     return data
 
 
-def extract_from_pr_body(pr_body):
+def extract_from_pr_body(pr_body, pa_token):
     """ Manipulates the provided PR body and extracts the required information """
     pr_body = pr_body.split("\n")
     for element in pr_body:
@@ -94,19 +103,10 @@ def extract_from_pr_body(pr_body):
 
     # The loop is for scripts that will be added to multiple categories
     for cat in category_list:
-        add_script(cat, title, folder, script, argument, requirements, user, desc)
-
-
-def push_changes(token):
-    git = Github(token)
-    user_object = git.get_user()
-    git_username = user_object.login
-    print(login_success)
+        add_script(cat, title, folder, script, argument, requirements, user, desc, pa_token)
 
 
 if __name__ == "__main__":
-    # Get PR boyd
+    # Get PR body and pass pa_token
     data = sys.argv[1]
-    extract_from_pr_body(data)
-    # pass GitHub token
-    push_changes(sys.argv[2])
+    extract_from_pr_body(data, sys.argv[2])
