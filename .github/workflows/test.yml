@@ -14,4 +14,4 @@ jobs:
         run: |
           echo $token
         env:
-          toekn: ${{ secrets.github_token }}
+          token: ${{ secrets.github_token }}
