@@ -40,7 +40,7 @@ def add_script(category, name, path, entry, arguments, requirments_path, contrib
 
 def read_data():
     """ Loads datastore.json """
-    with open("..\..\Master Script\datastore.json", "r") as file:
+    with open("./Master Script/datastore.json", "r") as file:
         data = json.load(file)
     return data
 
@@ -88,8 +88,8 @@ def extract_from_pr_body(pr_body):
     print("<----- ----- ----->")
 
     # The loop is for scripts that will be added to multiple categories
-    #for cat in category_list:
-    #    add_script(cat, title, folder, script, argument, requirements, user, desc)
+    for cat in category_list:
+        add_script(cat, title, folder, script, argument, requirements, user, desc)
     
 
 if __name__ == "__main__":
