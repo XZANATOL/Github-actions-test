@@ -35,15 +35,15 @@ Added Base-N calculator.
 `` If there is nothing to fill with, then type: none ``
 
 Category:
-- [ ] Calculators
+- [x] Calculators
 - [ ] AI/ML
 - [ ] Scrappers
-- [ ] Social_Media
+- [x] Social_Media
 - [ ] PDF
 - [ ] Image_Processing
 - [ ] Video_Processing
 - [ ] Games
-- [ ] Networking
+- [x] Networking
 - [ ] OS_Utilities
 - [ ] Automation
 - [ ] Cryptography
@@ -51,16 +51,16 @@ Category:
 - [ ] Fun
 - [ ] Others
 
-Title: <write scrip title here>
+Title: \<write scrip title here\>
 
-Folder: <type the folder name that contains your script>
+Folder: \<type the folder name that contains your script\>
 
-Requirments: <type the name of text file containing the required to install python packages>
+Requirments: \<type the name of text file containing the required to install python packages\>
 
-Script: <Enter the name of the ``.py`` file>
+Script: \<Enter the name of the ``.py`` file\>
 
-Arguments: <enter any arguments that the script needs but `-` separeted like: h-c-m>
+Arguments: \<enter any arguments that the script needs but `-` separeted like: h-c-m\>
 
-Contributor: <Enter your Github handle/username>
+Contributor: \<Enter your Github handle/username\>
 
-Description: <Enter a one line description that describes your script>
+Description: \<Enter a one line description that describes your script\>

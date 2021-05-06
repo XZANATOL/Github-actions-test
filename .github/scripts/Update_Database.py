@@ -1,5 +1,6 @@
-import sys
+from github import Github
 import json
+import sys
 import re
 
 
@@ -46,6 +47,10 @@ def read_data():
 
 
 def extract_from_pr_body(pr_body):
+    """ Manipulates the provided PR body and extracts the required information """
+    pr_body = pr_body.split("\n")
+    for element in pr_body:
+        pr_body[pr_body.index(element)] = element.rstrip("\r")
     pr_body = pr_body[pr_body.index("## Project Metadata"):]
     category_list = []
     for text in pr_body:
@@ -90,11 +95,18 @@ def extract_from_pr_body(pr_body):
     # The loop is for scripts that will be added to multiple categories
     for cat in category_list:
         add_script(cat, title, folder, script, argument, requirements, user, desc)
-    
+
+
+def push_changes(token):
+    git = Github(token)
+    user_object = git.get_user()
+    git_username = user_object.login
+    print(login_success)
+
 
 if __name__ == "__main__":
+    # Get PR boyd
     data = sys.argv[1]
-    data = data.split("\n")
-    for element in data:
-        data[data.index(element)] = element.rstrip("\r")
     extract_from_pr_body(data)
+    # pass GitHub token
+    push_changes(sys.argv[2])
