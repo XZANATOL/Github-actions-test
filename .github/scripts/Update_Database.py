@@ -97,7 +97,4 @@ if __name__ == "__main__":
     data = data.split("\n")
     for element in data:
         data[data.index(element)] = element.rstrip("\r")
-    print("test*************************************")
-    print(data)
-    print("test*************************************")
-    #extract_from_pr_body(data)
+    extract_from_pr_body(data)
