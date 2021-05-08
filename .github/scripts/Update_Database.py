@@ -25,13 +25,15 @@ def add_script(category, name, path, entry, arguments, requirments_path, contrib
         if data_store[category]:                                          # Check for existing category or a new one
                 data_store[category].update(new_data[category])           # Add script
     except:
-        sure = "Y"
-        sure = input("A new category is about to be added. You sure? Y/n > ")
-        if sure.lower() == "y" or sure == "":
-            data_store.update(new_data)                                   # Add new category
-        else:
-            print("Data wasn't added please re-run the script and add the correct inputs.")
-            sys.exit(1)
+        data_store.update(new_data)                                       # Add new category
+
+    # <----- This part is to avoid a single/double quotes error when trying to update the database with PyGithub ----->
+    with open("./Master Script/datastore.json", "w") as file:
+        json.dump(data_store, file)
+    print("Script added to database")
+
+    with open("./Master Script/datastore.json", "r") as file:
+        data_store = file.readlines()[0]
 
     # <----- Github Login & Database Update ----->
     git = Github(pa_token)
@@ -40,7 +42,7 @@ def add_script(category, name, path, entry, arguments, requirments_path, contrib
     print("[+] PyGithub Login Success!")
     repo = git.get_repo("XZANATOL/Github-actions-test")
     datastore_file = repo.get_contents("./Master Script/datastore.json")
-    repo.update_file(datastore_file.path, "Updated datastore.json", str(data_store), datastore_file.sha, branch="main")
+    repo.update_file(datastore_file.path, "Updated datastore.json", data_store, datastore_file.sha, branch="main")
     print("[+] Database Updated")
 
 
