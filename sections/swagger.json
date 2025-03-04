@@ -1,9 +1,13 @@
 {
 	"admin_sections": [
-		"section1",
-		"section1",
-		"section1",
-		"section1",
-		"section1"
+		{
+			"title": "section 1",
+			"admin_file": "sections/section_1.json"
+		},
+
+		{
+			"title": "section 2",
+			"admin_file": "sections/section_2.json"
+		},
 	]
 }
