@@ -2,18 +2,17 @@
 	"Hero": {
 		"Main Title": {
 			"type": "text",
-			"data": "7zal2om",
+			"data": "7zal2om"
 		},
 		"Main Photo": {
 			"type": "image",
 			"data": "https://url.com"
 		}
 	},
-
 	"Donation": {
 		"Main Title": {
 			"type": "text",
-			"data": "7zal2om",
+			"data": "7zal2om"
 		},
 		"Main Photo": {
 			"type": "image",
