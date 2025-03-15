@@ -2,22 +2,22 @@
 	"Hero": {
 		"Main Title": {
 			"type": "text",
-			"data": "7zal2om"
+			"data": "7zal2om section 2"
 		},
 		"Main Photo": {
 			"type": "image",
-			"data": "https://url.com",
+			"data": "image0.png",
 			"path": "images/homepage/hero/"
 		}
 	},
 	"Donation": {
 		"Main Title": {
 			"type": "text",
-			"data": "7zal2om"
+			"data": "7zal2om section 2"
 		},
 		"Main Photo": {
 			"type": "image",
-			"data": "https://url.com",
+			"data": "image0.png",
 			"path": "images/homepage/hero/"
 		}
 	}
