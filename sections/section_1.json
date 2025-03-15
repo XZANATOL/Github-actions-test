@@ -1,24 +1,24 @@
 {
-	"Hero": {
-		"Main Title": {
-			"type": "text",
-			"data": "7zal2om"
-		},
-		"Main Photo": {
-			"type": "image",
-			"data": "image0.png",
-			"path": "images/homepage/hero/"
-		}
-	},
-	"Donation": {
-		"Main Title": {
-			"type": "text",
-			"data": "7zal2om"
-		},
-		"Main Photo": {
-			"type": "image",
-			"data": "image0.png",
-			"path": "images/homepage/hero/"
-		}
-	}
+  "Hero": {
+    "Main Title": {
+      "type": "text",
+      "data": "7zal2omaaa"
+    },
+    "Main Photo": {
+      "type": "image",
+      "data": "image0.png",
+      "path": "images/homepage/hero/"
+    }
+  },
+  "Donation": {
+    "Main Title": {
+      "type": "text",
+      "data": "7zal2om"
+    },
+    "Main Photo": {
+      "type": "image",
+      "data": "image0.png",
+      "path": "images/homepage/hero/"
+    }
+  }
 }
