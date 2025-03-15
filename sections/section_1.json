@@ -6,7 +6,7 @@
 		},
 		"Main Photo": {
 			"type": "image",
-			"data": "https://url.com",
+			"data": "image0.png",
 			"path": "images/homepage/hero/"
 		}
 	},
@@ -17,7 +17,7 @@
 		},
 		"Main Photo": {
 			"type": "image",
-			"data": "https://url.com",
+			"data": "image0.png",
 			"path": "images/homepage/hero/"
 		}
 	}
