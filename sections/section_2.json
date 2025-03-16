@@ -6,8 +6,8 @@
 		},
 		"Main Photo": {
 			"type": "image",
-			"data": "image0.png",
-			"path": "images/homepage/hero/"
+			"data": "1742083391574.jpeg",
+			"path": "images/section_1/Hero/Main Photo/"
 		}
 	},
 	"Donation": {
@@ -17,8 +17,8 @@
 		},
 		"Main Photo": {
 			"type": "image",
-			"data": "image0.png",
-			"path": "images/homepage/hero/"
+			"data": "1742083395759.jpg",
+			"path": "images/section_1/Donation/Main Photo/"
 		}
 	}
 }
