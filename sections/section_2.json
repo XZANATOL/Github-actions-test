@@ -1,24 +1,24 @@
 {
-	"Hero": {
-		"Main Title": {
-			"type": "text",
-			"data": "7zal2om section 2358676"
-		},
-		"Main Photo": {
-			"type": "image",
-			"data": "1742083391574.jpeg",
-			"path": "images/section_2/Hero/Main Photo/"
-		}
-	},
-	"Donation": {
-		"Main Title": {
-			"type": "text",
-			"data": "7zal2om section 2"
-		},
-		"Main Photo": {
-			"type": "image",
-			"data": "1742083395759.jpg",
-			"path": "images/section_2/Donation/Main Photo/"
-		}
-	}
+  "Hero": {
+    "Main Title": {
+      "type": "text",
+      "data": "7zal2om section 2358676"
+    },
+    "Main Photo": {
+      "type": "image",
+      "data": "1742083391574.jpeg",
+      "path": "images/section_2/Hero/Main Photo/"
+    }
+  },
+  "Donation": {
+    "Main Title": {
+      "type": "text",
+      "data": "7zal2om section 2"
+    },
+    "Main Photo": {
+      "type": "image",
+      "data": "1742084617933.jpg",
+      "path": "images/section_2/Donation/Main Photo/"
+    }
+  }
 }
