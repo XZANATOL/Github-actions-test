@@ -6,12 +6,12 @@
     },
     "Main Photo": {
       "type": "image",
-      "data": "1742174324625.jpg",
+      "data": "1742174721729.jpg",
       "path": "images/section_1/Hero/Main Photo/"
     },
     "List of choices": {
       "type": "multiple",
-      "data": "choice 1",
+      "data": "choice 2",
       "choices": [
         "choice 1",
         "choice 2",
