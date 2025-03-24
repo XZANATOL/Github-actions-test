@@ -20,7 +20,14 @@
     },
     "testimonials": {
       "type": "testimonials",
-      "data": []
+      "data": [
+        {
+          "name": "hello",
+          "position": "0",
+          "content": "asd",
+          "image": "1742824192692.jpg"
+        }
+      ]
     }
   },
   "Donation": {
