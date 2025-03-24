@@ -19,8 +19,14 @@
       ]
     },
     "testimonials": {
-      "type": "testimonials",
-      "data": []
+      "type": "element_array",
+      "path": "images/section_1/Hero/Main Photo/",
+      "data": [
+          {
+            "text": "asdasd",
+            "image": "asdas.png"
+          }
+        ]
     }
   },
   "Donation": {
