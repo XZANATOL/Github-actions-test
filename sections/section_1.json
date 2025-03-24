@@ -17,6 +17,10 @@
         "choice 2",
         "choice 3"
       ]
+    },
+    "testimonials": {
+      "type": "testimonials",
+      "data": []
     }
   },
   "Donation": {
