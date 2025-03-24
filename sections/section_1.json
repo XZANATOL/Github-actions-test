@@ -25,16 +25,20 @@
         {
           "Main Title": {
             "type": "text",
-            "data": "what the heck, 2lo"
+            "data": "what the heck, 2lasdasdo"
           },
           "Main Photo": {
             "type": "image",
-            "data": "1742218183672.jpg"
+            "data": "1742827153177.jpg"
           },
           "List of choices": {
             "type": "multiple",
             "data": "choice 2",
-            "choices": ["choice 1", "choice 2", "choice 3"]
+            "choices": [
+              "choice 1",
+              "choice 2",
+              "choice 3"
+            ]
           }
         }
       ]
