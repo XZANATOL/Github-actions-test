@@ -22,15 +22,26 @@
       "type": "element_array",
       "path": "images/section_1/Hero/Main Photo/",
       "data": [
-        {
-          "text": "asdasdasd",
-          "image": "1742825922868.jpg"
-        },
-        {
-          "text": "sdfsdffasd",
-          "image": "1742825973402.jpg"
-        }
-      ]
+          {
+            "Main Title": {
+              "type": "text",
+              "data": "what the heck, 2lo"
+            },
+            "Main Photo": {
+              "type": "image",
+              "data": "1742218183672.jpg",
+            },
+            "List of choices": {
+              "type": "multiple",
+              "data": "choice 2",
+              "choices": [
+                "choice 1",
+                "choice 2",
+                "choice 3"
+              ]
+            }
+          }
+        ]
     }
   },
   "Donation": {
