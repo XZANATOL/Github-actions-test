@@ -40,6 +40,25 @@
               "choice 3"
             ]
           }
+        },
+        {
+          "Main Title": {
+            "type": "text",
+            "data": "hello element 2"
+          },
+          "Main Photo": {
+            "type": "image",
+            "data": "1742869999727.jpg"
+          },
+          "List of choices": {
+            "type": "multiple",
+            "data": "choice 1",
+            "choices": [
+              "choice 1",
+              "choice 2",
+              "choice 3"
+            ]
+          }
         }
       ]
     }
