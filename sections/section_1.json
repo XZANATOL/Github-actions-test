@@ -33,7 +33,7 @@
           },
           "List of choices": {
             "type": "multiple",
-            "data": "choice 2",
+            "data": "choice 3",
             "choices": [
               "choice 1",
               "choice 2",
