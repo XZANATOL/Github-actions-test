@@ -33,26 +33,7 @@
           },
           "List of choices": {
             "type": "multiple",
-            "data": "choice 3",
-            "choices": [
-              "choice 1",
-              "choice 2",
-              "choice 3"
-            ]
-          }
-        },
-        {
-          "Main Title": {
-            "type": "text",
-            "data": "element 2"
-          },
-          "Main Photo": {
-            "type": "image",
-            "data": "1742869299562.jpg"
-          },
-          "List of choices": {
-            "type": "multiple",
-            "data": "choice 3",
+            "data": "choice 2",
             "choices": [
               "choice 1",
               "choice 2",
