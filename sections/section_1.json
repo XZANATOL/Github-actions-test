@@ -6,7 +6,7 @@
     },
     "Main Photo": {
       "type": "image",
-      "data": "1742868802135.jpg",
+      "data": "1743042201885.png",
       "path": "images/section_1/Hero/Main Photo/"
     },
     "List of choices": {
@@ -29,7 +29,7 @@
           },
           "Main Photo": {
             "type": "image",
-            "data": "1742827153177.jpg"
+            "data": "1743042246167.png"
           },
           "List of choices": {
             "type": "multiple",
